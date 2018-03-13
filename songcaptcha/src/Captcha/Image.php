@@ -1,6 +1,6 @@
 <?php
 
-namespace Song\Captcha;
+namespace Captcha;
 
 use Symfony\Component\HttpFoundation\Response;
 

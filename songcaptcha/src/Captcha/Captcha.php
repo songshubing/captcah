@@ -1,6 +1,6 @@
 <?php
 
-namespace Song\Captcha;
+namespace Captcha;
 
 class Captcha{
     /**
