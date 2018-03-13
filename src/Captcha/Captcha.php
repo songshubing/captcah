@@ -127,7 +127,7 @@ class Captcha{
      *
      * @return Image
      */
-    public function make(array $container)
+    public function make(&$hashcode)
     {
         $code = $this->generate();
         $hash = password_hash($code, PASSWORD_BCRYPT, array('cost' => 10));
@@ -136,7 +136,9 @@ class Captcha{
         }
         // Session::put(self::SESSION_NAME, $hash);
 
-        array_push($container, $hash);//输出code的hash值
+        $hashcode = $hash;
+
+        // array_push($container, $hash);//输出code的hash值
         
         return new Image($this->build($code));
     }
@@ -298,7 +300,7 @@ class Captcha{
             return $this->getConfig('textFont');
         }
         // 随机字体
-        return __DIR__ . '/../fonts/' . mt_rand(0, 5) . '.ttf';
+        return __DIR__ . '/../../fonts/' . mt_rand(0, 5) . '.ttf';
     }
     /**
      * 写入验证码到图片中
