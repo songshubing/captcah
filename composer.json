@@ -1,0 +1,23 @@
+{
+    "name": "song/captcha",
+    "description": "二维码生成器",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "songshubing",
+            "email": "468718879@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-gd": "*"
+
+    },
+    
+    "autoload": {
+        "psr-4": {
+            "song\\captcha\\": "src/"
+        }
+    }
+}
