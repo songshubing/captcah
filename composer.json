@@ -1,5 +1,5 @@
 {
-    "name": "song/captcha",
+    "name": "jz/captcha",
     "description": "二维码生成器",
     "type": "library",
     "license": "MIT",
